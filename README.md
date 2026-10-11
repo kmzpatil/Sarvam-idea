@@ -5,7 +5,11 @@
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI%20Python%203.12-009688.svg)](https://fastapi.tiangolo.com)
 [![React](https://img.shields.io/badge/Frontend-React%2019%20%2B%20Vite-61DAFB.svg)](https://react.dev)
 [![Leaflet](https://img.shields.io/badge/GIS-Leaflet%20%2B%20CARTO%20Voyager-199900.svg)](https://carto.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Online%20Tunnel-success.svg)](https://spicy-readers-teach.loca.lt)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-kmzpatil%2FSarvam--idea-181717.svg?logo=github)](https://github.com/kmzpatil/Sarvam-idea)
+
+> 🔴 **Live Public Deployment URL**: **[https://spicy-readers-teach.loca.lt](https://spicy-readers-teach.loca.lt)** *(Active localtunnel for live evaluation)*  
+> 💻 **Local Host**: `http://127.0.0.1:8000`
 
 An intelligent multi-channel crisis triage platform built for the **Patna Ganga Flood Basin (Bihar)**. When catastrophic inundation overwhelms emergency lines with noisy, dialect-heavy distress calls, paper slips from relief camps, and SMS reports, **Signal Fusion Board** ingests, cross-corroborates, deduplicates, and ranks incidents in real-time.
 
@@ -124,16 +128,27 @@ npm run build
 cd ..
 ```
 
-### 4. Run Server
+### 4. Run Server (Choose Option A, B, or C)
+
+**Option A: 1-Command Python Launcher (Recommended)**
 ```bash
-# Start FastAPI (hosts both the REST API and the React frontend)
+python start.py
+```
+
+**Option B: Docker / Containerized**
+```bash
+docker compose up --build
+```
+
+**Option C: Manual Uvicorn**
+```bash
 python -m uvicorn backend.app:app --host 127.0.0.1 --port 8000
 ```
-Open your browser at **`http://127.0.0.1:8000`**.
+Open your browser at **`http://127.0.0.1:8000`** (or via the live tunnel link).
 
 ### 5. Run Test Suite
 ```bash
-pytest -v tests/test_signal_fusion.py
+pytest
 ```
 *(All 15 automated test suites pass in < 1 second)*.
 
