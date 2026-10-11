@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: signal-fusion-board
+    env: python
+    region: singapore
+    plan: free
+    buildCommand: |
+      cd frontend && npm install && npm run build && cd .. && pip install -r requirements.txt
+    startCommand: python -m uvicorn backend.app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: SARVAM_API_KEY
+        sync: false
+      - key: CARTO_API_KEY
+        sync: false
