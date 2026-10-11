@@ -1,0 +1,238 @@
+/* ==============================================================================
+   SIGNAL FUSION BOARD — Enhanced Text & Typography Formatting
+   Apple Human Interface Guidelines (macOS / iOS) Typography Architecture
+   Devanagari & Bengali Diacritic / Matra Clipping Protection
+   ============================================================================== */
+
+/* Native Indic Font Stack with proper vertical metrics */
+.hindi-brand,
+.hindi-text,
+.devanagari,
+[lang="hi"],
+[lang="hi-IN"] {
+  font-family: -apple-system, BlinkMacSystemFont, "Nirmala UI", "Segoe UI", "Devanagari Sangam MN", "Kohinoor Devanagari", sans-serif;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+}
+
+.bengali-text,
+.bangla,
+[lang="bn"],
+[lang="bn-IN"] {
+  font-family: -apple-system, BlinkMacSystemFont, "Shonar Bangla", "Bangla Sangam MN", "Nirmala UI", "Segoe UI", sans-serif;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+}
+
+/* Monospace Numbers & Metrics */
+.metric-val,
+.queue-rank-number,
+.inc-id-tag,
+.severity-score-val,
+.modal-inc-id,
+.score-mono {
+  font-variant-numeric: tabular-nums lining-nums;
+  -webkit-font-feature-settings: "tnum" 1, "lnum" 1;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
+
+/* Card Title Formatting & Word Wrap */
+.incident-card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+  margin: 0.15rem 0 0.35rem;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Meta Information Row */
+.incident-meta-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.meta-item strong {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.uncertainty-tag {
+  color: #0071E3;
+  font-weight: 600;
+  background: rgba(0, 113, 227, 0.08);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+}
+
+/* Tags and Badges Row */
+.incident-tags-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.4rem;
+}
+
+.corrob-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #065F46;
+  background: #ECFDF5;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+.channel-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #4B5563;
+  background: #F3F4F6;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+.dispatch-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #991B1B;
+  background: #FEF2F2;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+/* Evidence Report Body Typography */
+.report-body-text {
+  margin: 0.65rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.original-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: rgba(0, 0, 0, 0.02);
+  border-left: 3px solid #0071E3;
+  padding: 0.5rem 0.85rem;
+  border-radius: 0 8px 8px 0;
+  font-style: normal;
+  word-break: break-word;
+}
+
+.translated-text {
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: #4B5563;
+  padding-left: 0.85rem;
+  border-left: 3px solid #E5E7EB;
+  font-style: italic;
+}
+
+/* Rationale Narrative Box */
+.rationale-narrative {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: #374151;
+  background: #F8FAFC;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Score Breakdown Table */
+.score-breakdown-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+}
+
+.breakdown-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #4B5563;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.06);
+}
+
+.breakdown-row strong {
+  color: #111827;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.breakdown-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #111827;
+  padding-top: 0.5rem;
+  margin-top: 0.25rem;
+  border-top: 1.5px solid rgba(0, 0, 0, 0.12);
+}
+
+.breakdown-total strong {
+  color: #0071E3;
+  font-size: 1.05rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Citizen Advisory Text Box */
+.advisory-script-text {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #1F2937;
+  background: #FFFBEB;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  margin-top: 0.75rem;
+}
+
+.advisory-script-text strong {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #B45309;
+  margin-bottom: 0.35rem;
+}
